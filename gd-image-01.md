@@ -23,13 +23,12 @@ $( function(){
     <h3 class="alert alert-primary">
         タイトル
     </h3>
-    <div id="content"
-        >
+    <div id="content" class="m-4">
         <div>
-            <textarea name="text" id="text"></textarea>
+            <textarea name="text" id="text" style="width:400px;height:100px;"></textarea>
         </div>
         <div>
-            <input type="button" id="btn" value="ボタン">
+            <input type="button" id="btn" value="ボタン" class="btn btn-primary">
         </div>
     </div>
 </div>
