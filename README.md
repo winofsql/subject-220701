@@ -46,3 +46,6 @@ http://everything-you-do-is-practice.blogspot.com/2017/11/oracle-out.html
 ### GIMP のダイアログ内の値の初期設定
 
 ![image](https://user-images.githubusercontent.com/1501327/176601988-03e9933a-83f9-4bd1-9b48-96d2ff613657.png)
+
+![image](https://user-images.githubusercontent.com/1501327/176845804-cd4a764a-726c-466e-9e67-2bd47040a056.png)
+
