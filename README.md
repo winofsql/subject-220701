@@ -5,6 +5,7 @@
   - (2) [ROWID 疑似列](https://docs.oracle.com/cd/E16338_01/server.112/b56299/pseudocolumns008.htm)
   - (3) 結合演算子 => ||
 
+### インラインビュー
 ```sql
 select * from ( 
 
