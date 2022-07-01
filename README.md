@@ -40,6 +40,8 @@ BEGIN
   romaji1 := syain_rec.romaji;
 END;
 ```
+http://everything-you-do-is-practice.blogspot.com/2017/11/oracle-out.html
+
 
 ### GIMP のダイアログ内の値の初期設定
 
