@@ -13,3 +13,8 @@ $fontfile = "C:\Windows\Fonts\HGRPP1.TTC";
 // 挿入する文字列の色(白)
 $color = imagecolorallocate($image, hexdec($tc1), hexdec($tc2), hexdec($tc3));
 ```
+
+### 色入力
+```html
+<input type="color" id="color">
+```
