@@ -5,9 +5,15 @@
   - (2) [ROWID 疑似列](https://docs.oracle.com/cd/E16338_01/server.112/b56299/pseudocolumns008.htm)
   - (3) 結合演算子 => ||
 
+```sql
+select * from ( 
 
+select * from 得意先マスタ 
+	left outer join 社員マスタ
+	on 得意先マスタ.担当者 = 社員マスタ.社員コード
 
-
+) 得意先データ
+```
 
 
 ### GIMP のダイアログ内の値の初期設定
