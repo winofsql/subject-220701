@@ -29,7 +29,7 @@ $( function(){
             <textarea name="text" id="text"></textarea>
         </div>
         <div>
-            <input type="button" id="btn" value="ボタン>
+            <input type="button" id="btn" value="ボタン">
         </div>
     </div>
 </div>
