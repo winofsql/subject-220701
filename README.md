@@ -16,6 +16,8 @@ select * from 得意先マスタ
 ) 得意先データ
 ```
 
+### [PL/SQL](https://products.sint.co.jp/siob/blog/plsql#:~:text=%E3%81%BE%E3%81%A8%E3%82%81-,PL%2FSQL%E3%81%A8%E3%81%AF%EF%BC%9F,%E4%BB%A5%E4%B8%8B%E3%81%8C%E3%81%82%E3%81%92%E3%82%89%E3%82%8C%E3%81%BE%E3%81%99%E3%80%82)
+
 
 ### GIMP のダイアログ内の値の初期設定
 
