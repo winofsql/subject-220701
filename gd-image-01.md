@@ -143,3 +143,15 @@ $.ajax({
         "description": ""
     },
 ```
+
+### PHP 単独処理テンプレート
+```php
+<?php
+header( "Content-Type: application/json; charset=utf-8" );
+
+$json = new stdClass;
+$json->param1 = "OK";
+
+print json_encode( $json );
+?>
+```
