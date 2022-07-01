@@ -108,3 +108,38 @@ $.ajax({
 })
 ;
 ```
+
+### スニペット化
+```json
+    "JS-01": {
+        "prefix": "JS-01",
+        "body": [
+            "var formData = new FormData();",
+            "",
+            "formData.append(\"param_01\", \"value_01\" );",
+            "",
+            "\\$.ajax({",
+            "    url: \"./gd-01.php\",",
+            "    type: \"POST\",",
+            "    data: formData,",
+            "    processData: false,  // jQuery がデータを処理しないよう指定",
+            "    contentType: false   // jQuery が contentType を設定しないよう指定",
+            "})",
+            ".done(function( data, textStatus ){",
+            "    console.log( \"status:\" + textStatus );",
+            "    console.log( \"data:\" + JSON.stringify(data, null, \"    \") );",
+            "",
+            "",
+            "})",
+            ".fail(function(jqXHR, textStatus, errorThrown ){",
+            "    console.log( \"status:\" + textStatus );",
+            "    console.log( \"errorThrown:\" + errorThrown );",
+            "})",
+            ".always(function() {",
+            "",
+            "})",
+            ";",
+        ],
+        "description": ""
+    },
+```
