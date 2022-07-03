@@ -41,26 +41,12 @@ BEGIN
 END;
 ```
 ```sql
-create or replace procedure TEST1
-(
-  id1      IN   varchar2,
-  name1    OUT  varchar2,
-  romaji1  OUT  varchar2
-)
-IS
-  	CURSOR cur1 IS
-		SELECT 氏名,フリガナ FROM 社員マスタ
-		WHERE 社員コード = id1;
-
-	syain_rec cur1%ROWTYPE;
-
+DECLARE
+  x varchar2(100);
+  y varchar2(100);
 BEGIN
-  OPEN cur1;
-    FETCH cur1 INTO syain_rec;
-  CLOSE cur1;
-
-  name1   := syain_rec.氏名;
-  romaji1 := syain_rec.フリガナ;
+  test1('0001', x,y);
+  update コントロールマスタ set 会社名 = x;
 END;
 ```
 
