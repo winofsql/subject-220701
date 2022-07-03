@@ -20,14 +20,14 @@ select * from 得意先マスタ
 ```sql
 create or replace procedure TEST1
 (
-  id1      IN   number,
+  id1      IN   varchar2,
   name1    OUT  varchar2,
   romaji1  OUT  varchar2
 )
 IS
   	CURSOR cur1 IS
-		SELECT name,romaji FROM SYAIN
-		WHERE id = id1;
+		SELECT 氏名,フリガナ FROM 社員マスタ
+		WHERE 社員コード = id1;
 
 	syain_rec cur1%ROWTYPE;
 
@@ -36,10 +36,34 @@ BEGIN
     FETCH cur1 INTO syain_rec;
   CLOSE cur1;
 
-  name1   := syain_rec.name;
-  romaji1 := syain_rec.romaji;
+  name1   := syain_rec.氏名;
+  romaji1 := syain_rec.フリガナ;
 END;
 ```
+```sql
+create or replace procedure TEST1
+(
+  id1      IN   varchar2,
+  name1    OUT  varchar2,
+  romaji1  OUT  varchar2
+)
+IS
+  	CURSOR cur1 IS
+		SELECT 氏名,フリガナ FROM 社員マスタ
+		WHERE 社員コード = id1;
+
+	syain_rec cur1%ROWTYPE;
+
+BEGIN
+  OPEN cur1;
+    FETCH cur1 INTO syain_rec;
+  CLOSE cur1;
+
+  name1   := syain_rec.氏名;
+  romaji1 := syain_rec.フリガナ;
+END;
+```
+
 http://everything-you-do-is-practice.blogspot.com/2017/11/oracle-out.html
 
 
