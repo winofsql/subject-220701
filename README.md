@@ -22,7 +22,7 @@ create or replace procedure TEST1
 (
   id1      IN   varchar2,
   name1    OUT  varchar2,
-  romaji1  OUT  varchar2
+  name2    OUT  varchar2
 )
 IS
   	CURSOR cur1 IS
@@ -37,7 +37,7 @@ BEGIN
   CLOSE cur1;
 
   name1   := syain_rec.氏名;
-  romaji1 := syain_rec.フリガナ;
+  name2   := syain_rec.フリガナ;
 END;
 ```
 ```sql
