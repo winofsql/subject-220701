@@ -57,11 +57,11 @@ END;
 ```
 ```sql
 DECLARE
-  x varchar2(100);
-  y varchar2(100);
+    x varchar2(100);
+    y varchar2(100);
 BEGIN
-  test1('0001', x,y);
-  update コントロールマスタ set 会社名 = x;
+    test1('0001', x, y );
+    update PROC_DEBUG set DATA3 = x, DATA4 = y;
 END;
 ```
 
