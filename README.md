@@ -28,7 +28,7 @@ create table proc_debug (
 )
 ```
 ```sql
-insert into proc_debug (null,null,null,null,null,null)
+insert into proc_debug values(null,null,null,null,null,null)
 ```
 
 ```sql
