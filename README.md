@@ -18,26 +18,41 @@ select * from 得意先マスタ
 
 ### [PL/SQL](https://products.sint.co.jp/siob/blog/plsql#:~:text=%E3%81%BE%E3%81%A8%E3%82%81-,PL%2FSQL%E3%81%A8%E3%81%AF%EF%BC%9F,%E4%BB%A5%E4%B8%8B%E3%81%8C%E3%81%82%E3%81%92%E3%82%89%E3%82%8C%E3%81%BE%E3%81%99%E3%80%82)
 ```sql
+create table proc_debug (
+	data1 number,
+	data2 number,
+	data3 varchar2(100),
+	data4 varchar2(100),
+	data5 date,
+	data6 date
+)
+```
+```sql
+insert into proc_debug (null,null,null,null,null,null)
+```
+
+```sql
 create or replace procedure TEST1
 (
-  id1      IN   varchar2,
-  name1    OUT  varchar2,
-  name2    OUT  varchar2
+    code     IN   varchar2,
+    name1    OUT  varchar2,
+    name2    OUT  varchar2
 )
 IS
-  	CURSOR cur1 IS
-		SELECT 氏名,フリガナ FROM 社員マスタ
-		WHERE 社員コード = id1;
+    CURSOR cur1 IS
+        SELECT 氏名,フリガナ FROM 社員マスタ
+        WHERE 社員コード = code;
 
-	syain_rec cur1%ROWTYPE;
+    syain_rec cur1%ROWTYPE;
 
 BEGIN
-  OPEN cur1;
-    FETCH cur1 INTO syain_rec;
-  CLOSE cur1;
+    OPEN cur1;
+        FETCH cur1 INTO syain_rec;
+    CLOSE cur1;
 
-  name1   := syain_rec.氏名;
-  name2   := syain_rec.フリガナ;
+    name1   := syain_rec.氏名;
+    name2   := syain_rec.フリガナ;
+
 END;
 ```
 ```sql
