@@ -65,6 +65,47 @@ BEGIN
 END;
 ```
 
+```sql
+CREATE OR REPLACE FUNCTION GET_CNAME
+(
+    /* 文字列引数の定義 */
+    PM_STRING IN VARCHAR2
+)
+/* 戻り値の定義 */
+RETURN VARCHAR2
+
+/**********************************************************/
+/* 変数の定義 */
+/**********************************************************/
+AS
+    RET_VALUE	VARCHAR2(2000);
+    WK_VALUE	VARCHAR2(2000) := '初期値の設定';
+
+/**********************************************************/
+/* 処理開始 */
+/**********************************************************/
+BEGIN
+
+    /* 代入 */
+    RET_VALUE := PM_STRING;
+
+    IF RET_VALUE is NULL THEN 
+        RET_VALUE := '該当者は存在しません';
+    ELSE 
+        SELECT 氏名 INTO WK_VALUE from 社員マスタ
+            WHERE 社員コード = RET_VALUE;
+        RET_VALUE := WK_VALUE;
+    END IF; 
+
+    /* 戻り値 */
+    RETURN RET_VALUE;
+
+END;
+```
+```sql
+select 社員コード,GET_CNAME(社員コード) as 氏名 from 社員マスタ
+```
+
 http://everything-you-do-is-practice.blogspot.com/2017/11/oracle-out.html
 
 
