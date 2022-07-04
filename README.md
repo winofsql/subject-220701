@@ -38,7 +38,7 @@ create or replace procedure TEST1
     name1    OUT  varchar2,
     name2    OUT  varchar2
 )
-IS
+AS
     CURSOR cur1 IS
         SELECT 氏名,フリガナ FROM 社員マスタ
         WHERE 社員コード = code;
